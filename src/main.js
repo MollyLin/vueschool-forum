@@ -1,26 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createRouter, createWebHistory } from 'vue-router'
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/components/PageHome')
-  },
-  {
-    path: '/thread/:id',
-    name: 'ThreadShow',
-    component: () => import('@/components/PageThreadShow'),
-    props: true
-
-  }
-]
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
+import router from '@/router'
 
 const forumApp = createApp(App)
 forumApp.use(router)

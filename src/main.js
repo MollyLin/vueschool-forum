@@ -7,6 +7,13 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/components/PageHome')
+  },
+  {
+    path: '/thread/:id',
+    name: 'ThreadShow',
+    component: () => import('@/components/PageThreadShow'),
+    props: true
+
   }
 ]
 
